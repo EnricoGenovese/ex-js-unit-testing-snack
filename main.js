@@ -7,7 +7,7 @@ function getInitials(fullName) {
 // Snack 2
 
 function createSlug(str) {
-    return str.toLowerCase();
+    return str.replace(/\s+/g, "-").toLowerCase();
 }
 
 function average(arr) {
