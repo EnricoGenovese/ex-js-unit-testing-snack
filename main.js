@@ -27,9 +27,9 @@ function average(arr) {
 function isPalindrome(str) {
     const strArr = str.split("");
     const revArr = strArr.reverse();
-    const palStr = revArr.join("")
+    const palStr = revArr.join("");
 
-    return palStr === str;
+    return palStr.replace(/\s+/g, "").toLowerCase() === str.replace(/\s+/g, "").toLowerCase();
 }
 
 module.exports = {

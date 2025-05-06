@@ -37,9 +37,28 @@ test("La funzione isPalindrome verifica se una stringa è un palindromo.", () =>
     expect(isPalindrome("otto")).toBeTruthy();
     expect(isPalindrome("casa")).toBeFalsy();
 })
+
 // Snack 6
 
 test("La funzione createSlug lancia un errore se il titolo è vuoto o non valido.", () => {
     expect(() => createSlug("")).toThrow();
     expect(() => createSlug("   ")).toThrow();
+})
+
+// Snack 7 
+
+const posts = [
+    { id: 1, title: "Primo Post", slug: "primo-post" },
+    { id: 2, title: "Secondo Post", slug: "secondo-post" },
+    { id: 3, title: "I topi non avevano nipoti", slug: "i-topi-non-avevano-nipoti" },
+]
+
+function findPostById(arr, id) {
+    return arr.find(a => a.id === id)
+}
+
+test("La funzione findPostById restituisce il post corretto dato l’array di post e l’id", () => {
+    expect(findPostById(posts, 2)).toEqual({ id: 2, title: "Secondo Post", slug: "secondo-post" });
+    expect(createSlug(findPostById(posts, 1).title)).toBe("primo-post");
+    expect(isPalindrome(findPostById(posts, 3).title)).toBeTruthy();
 })

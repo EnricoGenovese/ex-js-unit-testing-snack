@@ -34,3 +34,12 @@ Snack 6
 Creare un test che verifichi la seguente descrizione:
 
 "La funzione createSlug lancia un errore se il titolo è vuoto o non valido."
+
+Snack 7
+Crea un array di oggetti posts, in cui ogni oggetto ha le proprietà id, title e slug.
+
+Creare un test che verifichi le seguenti descrizioni:
+
+"La funzione findPostById restituisce il post corretto dato l’array di post e l’id"
+
+Creare uno o più test aggiuntivi che controllino che la struttura dati passati sia conforme (ogni post ha le proprietà id, title e slug, viene passato un id numerico).
