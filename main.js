@@ -20,8 +20,17 @@ function average(arr) {
 }
 
 
+function isPalindrome(str) {
+    const strArr = str.split("");
+    const revArr = strArr.reverse();
+    const palStr = revArr.join("")
+
+    return palStr === str;
+}
+
 module.exports = {
     getInitials,
     createSlug,
-    average
+    average,
+    isPalindrome
 }
