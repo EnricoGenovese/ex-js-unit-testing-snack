@@ -7,7 +7,11 @@ function getInitials(fullName) {
 // Snack 2
 
 function createSlug(str) {
+    if (str.replace(/\s/g, "") === "" || !str) {
+        throw new Error('The string cannot be empty');
+    }
     return str.replace(/\s+/g, "-").toLowerCase();
+
 }
 
 function average(arr) {

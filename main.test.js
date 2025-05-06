@@ -21,7 +21,7 @@ test("La funzione createSlug restituisce una stringa in lowercase.", () => {
 test("La funzione average calcola la media aritmetica di un array di numeri.", () => {
     expect(average([1, 2, 3, 4, 5])).toBe(3);
     expect(average([6, 7, 8, 9, 10])).toBe(8);
-    expect(() => average(["hello", 4, 5, true])).toThrow()
+    expect(() => average(["hello", 4, 5, true])).toThrow();
 
 })
 
@@ -36,4 +36,10 @@ test("La funzione createSlug sostituisce gli spazi con -.", () => {
 test("La funzione isPalindrome verifica se una stringa è un palindromo.", () => {
     expect(isPalindrome("otto")).toBeTruthy();
     expect(isPalindrome("casa")).toBeFalsy();
+})
+// Snack 6
+
+test("La funzione createSlug lancia un errore se il titolo è vuoto o non valido.", () => {
+    expect(() => createSlug("")).toThrow();
+    expect(() => createSlug("   ")).toThrow();
 })
